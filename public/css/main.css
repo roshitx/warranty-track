@@ -367,13 +367,10 @@ label {
 }
 
 .header-btn a {
-	background: #6c5edf;
-	padding: 17px 60px;
-	border-radius: 30px;
-	font-size: 18px;
-	letter-spacing: 0;
+	padding: 17px 20px;
+	font-size: 12px;
 	font-weight: 700;
-	color: #fff;
+	color: rgb(255,96,163);
 }
 .header-btn-3 a{
   background-image: -moz-linear-gradient( 178deg, rgb(255,153,165) 0%, rgb(255,96,163) 100%);
@@ -432,6 +429,10 @@ label {
 .header-btn a:hover {
 	background: #ff63a3;
 	color: #fff;
+}
+
+.dropdown-toggle {
+	margin: 0;
 }
 
 /* 3. slider */
