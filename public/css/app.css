@@ -25,6 +25,10 @@ File: app.css
   - Responsive
 */
 
+.colored-toast.swal2-icon-success {
+    background-color: #a5dc86 !important;
+}
+
 body {
     font-size: 14px;
 

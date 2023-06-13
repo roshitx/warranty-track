@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ViewController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +23,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::group(['middleware' => 'auth'], function() {
-    Route::get('/dashboard', [ViewController::class, 'dashboard']);
+Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function() {
+    Route::get('/', [ViewController::class, 'dashboard'])->name('overview');
+    Route::resource('users', UserController::class);
 });

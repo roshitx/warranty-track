@@ -29,6 +29,7 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
+                                    <li><a href="{{ route('overview') }}"><i class="bi bi-speedometer"></i></a></li>
                                 @endauth
                                 @guest
                                     <li><a href="{{ route('login') }}">Login</a></li>

@@ -18,6 +18,10 @@
     </script>
     {{-- End Bootstrap --}}
 
+    {{-- Bootstrap Icon --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    {{-- End Bootstrap Icon --}}
+
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/meanmenu.css">
@@ -26,6 +30,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
 
+
+
     <title>WarrantyTracker</title>
 </head>
 
@@ -33,8 +39,10 @@
     @include('partials.header')
     @yield('content')
     <!-- js here -->
-    <script src="js/jquery-1.12.4.min.js"></script>
-    <script src="js/popper.min.js"></script>
+
+    {{-- JQuery --}}
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="js/popper.min.js"></>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/waypoints.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
@@ -43,6 +51,7 @@
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.meanmenu.min.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 
 </html>

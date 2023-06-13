@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -12,7 +14,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.allusers', [
+            'users' => User::where('id', '!=', Auth::id())->get(),
+        ]);
     }
 
     /**
@@ -28,7 +32,17 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'username' => 'required|string|min:5|max:100',
+            'email' => 'required|string|email|unique:users,email',
+            'password' => 'required|min:3',
+            'birth' => 'date',
+            'gender' => 'required',
+            'role' => 'required'
+        ]);
+        $validatedData['password'] = Hash::make($validatedData['password']);
+        User::create($validatedData);
+        return redirect()->back()->with('success', "Berhasil menambah user baru!");
     }
 
     /**
@@ -60,6 +74,7 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $user->delete();
+        return redirect()->back()->with('success', "Berhasil menghapus user");
     }
 }
