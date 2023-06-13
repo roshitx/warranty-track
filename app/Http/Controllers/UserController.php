@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -66,7 +68,25 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        try {
+            $validatedData = $request->validate([
+                'username' => 'string|required|min:3',
+                'email' => [
+                    'required',
+                    'email',
+                    Rule::unique('users')->ignore($user->id),
+                ],
+                'birth' => 'required|date',
+                'gender' => 'required',
+                'role' => 'required'
+            ]);
+    
+            User::where('id', $user->id)
+                ->update($validatedData);
+            return redirect()->route('users.index')->with('success', "Berhasil memperbarui user");
+        } catch (Exception $e) {
+            return redirect()->route('users.index')->with('error', 'Error ketika memperbarui user. Coba lagi');
+        }
     }
 
     /**
