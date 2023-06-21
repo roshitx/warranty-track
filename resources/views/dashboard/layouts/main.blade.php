@@ -30,9 +30,11 @@
     <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
     {{-- Sweetalert --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    {{-- Clipboard.js --}}
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
 
 
-    <title>Dashtreme - Multipurpose Bootstrap5 Admin Template</title>
+    <title>SIGAR -  Sistem Garansi</title>
 </head>
 
 <body class="bg-theme bg-theme1">
@@ -47,20 +49,12 @@
     <script src="/assets/plugins/metismenu/js/metisMenu.min.js"></script>
     <script src="/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
     <script src="/assets/plugins/chartjs/js/Chart.min.js"></script>
-    <script src="/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
-    <script src="/assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
     <script src="/assets/plugins/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
     <script src="/assets/plugins/sparkline-charts/jquery.sparkline.min.js"></script>
     <script src="/assets/plugins/jquery-knob/excanvas.js"></script>
     <script src="/assets/plugins/jquery-knob/jquery.knob.js"></script>
 
-    <script>
-        $(function() {
-            $(".knob").knob();
-        });
-        // Sweetalert
-        const Swal = require('sweetalert2')
-    </script>
+ 
     <script src="/assets/js/index.js"></script>
     <!--app JS-->
     <script src="/assets/js/app.js"></script>

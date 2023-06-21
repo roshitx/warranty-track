@@ -41,7 +41,7 @@
     <!-- js here -->
 
     {{-- JQuery --}}
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/popper.min.js"></>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/waypoints.min.js"></script>

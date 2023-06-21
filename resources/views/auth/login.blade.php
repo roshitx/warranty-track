@@ -4,6 +4,14 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
+                <div class="card mb-3">
+                    <div class="card-body d-flex align-items-center justify-content-center">
+                        <div class="col-12 text-center">
+                            <img src="{{ asset('img/logo-black.svg') }}" width="80">
+                            <h2 class="fw-bold">SIGAR</h2>
+                        </div>
+                    </div>
+                </div>
                 <div class="card">
                     <div class="card-header">
                         <h4 class="mb-0">{{ __('Login') }}</h4>
@@ -12,7 +20,6 @@
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
-
                             <div class="row mb-3">
                                 <label for="email"
                                     class="col-md-3 col-form-label text-md-end">{{ __('Email Address :') }}</label>
@@ -55,7 +62,9 @@
                                 </div>
                             </div>
 
-                            <a href="{{ route('register') }}"><p class="text-center">Do not have account yet? Register first</p></a>
+                            <a href="{{ route('register') }}">
+                                <p class="text-center">Do not have account yet? Register first</p>
+                            </a>
                         </form>
                     </div>
                 </div>

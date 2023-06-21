@@ -5,16 +5,13 @@
                 <div class="col-xl-2 col-lg-1 d-flex align-items-center">
                     <div class="logo d-flex justify-content-center align-items-center">
                         <div class="logo-img">
-                            <a href="index.html"> <img src="{{ asset('img/logo.svg') }}" alt="Warranty Tracker Logo"
-                                    width="50"></a>
-                        </div>
-                        <div class="logo-text ms-3">
-                            <h2 class="text-white fs-4">Warranty Tracker</h2>
+                            <a href="index.html"> <img src="{{ asset('img/logo.png') }}" alt="Warranty Tracker Logo"
+                                    width="160"></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-10 col-lg-11">
-                    <div class="main-menu f-right">
+                <div class="col-xl-10 col-lg-11 d-flex justify-content-end align-items-center">
+                    <div class="main-menu">
                         <nav id="mobile-menu">
                             <ul>
                                 <li><a href="#home">Home</a></li>

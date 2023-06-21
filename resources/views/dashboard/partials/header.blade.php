@@ -5,7 +5,7 @@
                     <img src="{{ asset('assets/images/logo-icon.png') }}" class="logo-icon" alt="logo icon">
                 </div>
                 <div>
-                    <h4 class="logo-text">Warranty Track</h4>
+                    <h4 class="logo-text">SIGAR</h4>
                 </div>
             </div>
             <!--navigation-->
@@ -13,27 +13,27 @@
                 <li class="menu-label">Administrator</li>
                 <li>
                     <a href="{{ route('overview') }}" class="{{ Request::is('dashboard') ? 'active' : '' }}">
-                        <div class="parent-icon"><i class='bx bx-home-circle'></i>
+                        <div class="parent-icon"><i class='bx bx-tachometer'></i>
                         </div>
                         <div class="menu-title">Overview</div>
                     </a>
                 </li>
 
                 <li>
-                    <a href="" class="">
-                        <div class="parent-icon"><i class='bx bx-home-circle'></i>
+                    <a href="{{ route('barang.index') }}" class="">
+                        <div class="parent-icon"><i class='bx bx-cart'></i>
                         </div>
-                        <div class="menu-title">Kelola Barang</div>
+                        <div class="menu-title">Kelola Product</div>
                     </a>
                 </li>
-
-                <li>
-                    <a href="{{ route('users.index') }}" class="{{ Request::is('dashboard/users*') ? 'active' : '' }}">
-                        <div class="parent-icon"><i class='bx bx-group'></i>
-                        </div>
-                        <div class="menu-title">Kelola User</div>
-                    </a>
-                </li>
+                    <li>
+                        <a href="{{ route('users.index') }}"
+                            class="{{ Request::is('dashboard/users*') ? 'active' : '' }}">
+                            <div class="parent-icon"><i class='bx bx-group'></i>
+                            </div>
+                            <div class="menu-title">Kelola User</div>
+                        </a>
+                    </li>
                 <li class="menu-label">Back to Landingpage</li>
                 <li>
                     <a href="/" class="{{ Request::is('#') ? 'active' : '' }}">
@@ -74,25 +74,14 @@
                     <div class="user-box dropdown">
                         <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret"
                             href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="{{ asset('assets/images/avatars/avatar-1.png') }}" class="user-img" alt="user avatar">
+                            <img src="{{ asset('assets/images/avatars/avatar-1.png') }}" class="user-img"
+                                alt="user avatar">
                             <div class="user-info ps-3">
                                 <p class="user-name mb-0">{{ Auth::user()->username }}</p>
                                 <p class="designattion mb-0">{{ Auth::user()->role }}</p>
                             </div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="javascript:;"><i
-                                        class="bx bx-user"></i><span>Profile</span></a>
-                            </li>
-                            <li><a class="dropdown-item" href="javascript:;"><i
-                                        class="bx bx-cog"></i><span>Settings</span></a>
-                            </li>
-                            <li><a class="dropdown-item" href="javascript:;"><i
-                                        class='bx bx-home-circle'></i><span>Dashboard</span></a>
-                            </li>
-                            <li>
-                                <div class="dropdown-divider mb-0"></div>
-                            </li>
                             <li><a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault(); 
                                     document.getElementById('logout-form').submit();"><i
