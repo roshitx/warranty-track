@@ -40,7 +40,7 @@ class ViewController extends Controller
     {
         $query = $request->input('query');
     
-        $products = Barang::where('kd_barang', $query)->get();
+        $products = Barang::whereRaw("BINARY kd_barang = ?", [$query])->get();
     
         foreach ($products as $product) {
             $start_date = Carbon::parse($product->start_date);

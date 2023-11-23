@@ -10,7 +10,7 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div>
-                                        <h3>Kelola Product</h3>
+                                        <h3 class="">Kelola Product</h3>
                                     </div>
                                 </div>
                                 <hr>
@@ -38,7 +38,7 @@
                                                                 class="form-control @error('nama_barang')
                                                             is-invalid @enderror"
                                                                 name="nama_barang" id="nama_barang" type="text"
-                                                                placeholder="Nama barang">
+                                                                placeholder="Nama barang" required>
                                                             @error('nama_barang')
                                                                 <div class="invalid-feedback">
                                                                     {{ $message }}
@@ -57,13 +57,13 @@
                                                                     <label for="start-date" class="form-label">Tanggal mulai
                                                                         garansi</label>
                                                                     <input type="date" class="form-control"
-                                                                        id="start-date" name="start_date">
+                                                                        id="start-date" name="start_date" required>
                                                                 </div>
                                                                 <div class="col-6">
                                                                     <label for="end-date" class="form-label">Tanggal akhir
                                                                         garansi</label>
                                                                     <input type="date" id="end-date"
-                                                                        class="form-control" name="end_date">
+                                                                        class="form-control" name="end_date" required>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -84,7 +84,7 @@
                                 {{-- Table All Barang --}}
                                 <div class="table-container">
                                     <div class="table-responsive">
-                                        <table id="userTable" class="table table-striped table-bordered table-hover"
+                                        <table id="userTable" class="table table-bordered "
                                             style="width:100%">
                                             <thead>
                                                 <tr>
@@ -173,14 +173,14 @@
                                                                                 name="nama_barang" id="nama_barang"
                                                                                 type="text"
                                                                                 value="{{ old('nama_barang', $barang->nama_barang) }}"
-                                                                                placeholder="Nama barang">
+                                                                                placeholder="Nama barang" required>
                                                                         </div>
                                                                         <div class="mb-3">
                                                                             <label class="form-label"
                                                                                 for="description">Deskripsi
                                                                                 *opsional</label>
                                                                             <textarea class="form-control" name="description" id="description" rows="3" name="description"
-                                                                                placeholder="Lorem ipsum dolor sit amet">{{ old('description', $barang->description) }}</textarea>
+                                                                                placeholder="Lorem ipsum dolor sit amet" required>{{ old('description', $barang->description) }}</textarea>
                                                                         </div>
                                                                         <div class="mb-3">
                                                                             <div class="row">
@@ -191,7 +191,7 @@
                                                                                     <input type="date"
                                                                                         class="form-control"
                                                                                         id="start-date" name="start_date"
-                                                                                        value="{{ old('start_date', $barang->start_date) }}">
+                                                                                        value="{{ old('start_date', $barang->start_date) }}" required>
                                                                                 </div>
                                                                                 <div class="col-6">
                                                                                     <label for="end-date"
@@ -200,7 +200,7 @@
                                                                                     <input type="date" id="end-date"
                                                                                         class="form-control"
                                                                                         name="end_date"
-                                                                                        value="{{ old('end_date', $barang->end_date) }}">
+                                                                                        value="{{ old('end_date', $barang->end_date) }}" required>
                                                                                 </div>
                                                                             </div>
                                                                         </div>

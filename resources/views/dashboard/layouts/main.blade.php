@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--favicon-->
-    <link rel="icon" href="/assets/images/favicon-32x32.png" type="image/png" />
+    <link rel="shortcut icon" href="{{ asset('img/shield-check.ico') }}" type="image/x-icon">
     <!--plugins-->
     <link href="/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
     <link href="/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
@@ -37,9 +37,8 @@
     <title>SIGAR -  Sistem Garansi</title>
 </head>
 
-<body class="bg-theme bg-theme1">
+<body>
     @include('dashboard.partials.header')
-    @include('dashboard.partials.switcher')
     @yield('content.dashboard')
 
     <!-- Bootstrap JS -->

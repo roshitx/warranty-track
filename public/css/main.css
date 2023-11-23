@@ -1672,3 +1672,15 @@ ul.price-nav li:nth-child(2) a {
 .single-brand img {
 	display: inline-block;
 }
+
+
+#query {
+	position: relative;
+}
+
+.search-icon {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+}

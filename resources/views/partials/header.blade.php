@@ -5,7 +5,7 @@
                 <div class="col-xl-2 col-lg-1 d-flex align-items-center">
                     <div class="logo d-flex justify-content-center align-items-center">
                         <div class="logo-img">
-                            <a href="index.html"> <img src="{{ asset('img/logo.png') }}" alt="Warranty Tracker Logo"
+                            <a href="index.html"> <img src="{{ asset('img/logo-revisi.png') }}" alt="Warranty Tracker Logo"
                                     width="160"></a>
                         </div>
                     </div>
@@ -15,7 +15,7 @@
                         <nav id="mobile-menu">
                             <ul>
                                 <li><a href="#home">Home</a></li>
-                                <li><a href="#features">Warranty Checker</a></li>
+                                <li><a href="#features">Checker</a></li>
                                 @auth
                                     <li><a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();

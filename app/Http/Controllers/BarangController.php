@@ -55,7 +55,7 @@ class BarangController extends Controller
             'start_date' => 'date|required',
             'end_date' => 'date|required'
         ]);
-        $validatedData['kd_barang'] = Str::random(8);
+        $validatedData['kd_barang'] = str_pad(mt_rand(0, 99999999), 8, '0', STR_PAD_LEFT);
         Barang::create($validatedData);
         return redirect()->back()->with('success', "Berhasil menambah data barang!");
     }

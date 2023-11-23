@@ -30,9 +30,9 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
 
+    <link rel="shortcut icon" href="{{ asset('img/shield-check.ico') }}" type="image/x-icon">
 
-
-    <title>WarrantyTracker</title>
+    <title>Sistem Garansi</title>
 </head>
 
 <body>

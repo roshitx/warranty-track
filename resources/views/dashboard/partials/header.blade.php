@@ -1,12 +1,7 @@
         <!--sidebar wrapper -->
-        <div class="sidebar-wrapper" data-simplebar="true">
-            <div class="sidebar-header">
-                <div>
-                    <img src="{{ asset('assets/images/logo-icon.png') }}" class="logo-icon" alt="logo icon">
-                </div>
-                <div>
-                    <h4 class="logo-text">SIGAR</h4>
-                </div>
+        <div class="sidebar-wrapper bg-dark" data-simplebar="true">
+            <div class="sidebar-header bg-dark d-flex justify-content-center">
+                    <img src="{{ asset('img/logo-revisi.png') }}" width="140" alt="logo icon">
             </div>
             <!--navigation-->
             <ul class="metismenu" id="menu">
@@ -15,7 +10,7 @@
                     <a href="{{ route('overview') }}" class="{{ Request::is('dashboard') ? 'active' : '' }}">
                         <div class="parent-icon"><i class='bx bx-tachometer'></i>
                         </div>
-                        <div class="menu-title">Overview</div>
+                        <div class="menu-title">Dashboard</div>
                     </a>
                 </li>
 
@@ -49,7 +44,7 @@
         <!--start header -->
         <header>
             <div class="topbar d-flex align-items-center">
-                <nav class="navbar navbar-expand">
+                <nav class="navbar navbar-expand bg-dark">
                     <div class="search-bar flex-grow-1">
 
                     </div>
@@ -74,8 +69,6 @@
                     <div class="user-box dropdown">
                         <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret"
                             href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="{{ asset('assets/images/avatars/avatar-1.png') }}" class="user-img"
-                                alt="user avatar">
                             <div class="user-info ps-3">
                                 <p class="user-name mb-0">{{ Auth::user()->username }}</p>
                                 <p class="designattion mb-0">{{ Auth::user()->role }}</p>
